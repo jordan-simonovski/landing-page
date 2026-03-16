@@ -43,10 +43,33 @@ function initMotion() {
 function init() {
   initEntrance();
   initMotion();
+  initMetrics();
 }
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", init, { once: true });
 } else {
   init();
+}
+
+function initMetrics() {
+  const uptimeEl = document.getElementById("metric-uptime");
+  const spansEl = document.getElementById("metric-spans");
+  const noiseEl = document.getElementById("metric-noise");
+
+  if (!uptimeEl || !spansEl || !noiseEl || prefersReducedMotion.matches) {
+    return;
+  }
+
+  const noiseStates = ["low", "stable", "quiet", "contained"];
+  let spanValue = 4.2;
+  let noiseIndex = 0;
+
+  window.setInterval(() => {
+    spanValue += 0.09 + Math.random() * 0.04;
+    uptimeEl.textContent = `${(99.95 + Math.random() * 0.04).toFixed(2)}%`;
+    spansEl.textContent = `${spanValue.toFixed(2)}M`;
+    noiseEl.textContent = noiseStates[noiseIndex % noiseStates.length];
+    noiseIndex += 1;
+  }, 2200);
 }

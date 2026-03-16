@@ -8,6 +8,13 @@
       content="Jordan Simonovski - observability engineer, builder of useful dev tools, and cloud tinkerer."
     />
     <title>Jordan Simonovski</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -15,18 +22,56 @@
       <span class="orb orb-a"></span>
       <span class="orb orb-b"></span>
       <span class="orb orb-c"></span>
+      <div class="telemetry-lines">
+        <svg class="telemetry-line telemetry-line-a" viewBox="0 0 1200 180" preserveAspectRatio="none">
+          <path d="M0 110 L90 108 L180 112 L270 78 L360 82 L450 74 L540 98 L630 90 L720 104 L810 68 L900 86 L990 60 L1080 66 L1200 58"></path>
+        </svg>
+        <svg class="telemetry-line telemetry-line-b" viewBox="0 0 1200 180" preserveAspectRatio="none">
+          <path d="M0 132 L100 126 L200 138 L300 118 L400 124 L500 108 L600 118 L700 104 L800 110 L900 88 L1000 96 L1100 80 L1200 90"></path>
+        </svg>
+        <svg class="telemetry-line telemetry-line-c" viewBox="0 0 1200 180" preserveAspectRatio="none">
+          <path d="M0 138 L85 126 L170 138 L255 136 L340 122 L425 130 L510 116 L595 120 L680 102 L765 108 L850 96 L935 100 L1020 86 L1105 92 L1200 88"></path>
+        </svg>
+      </div>
       <span class="grain"></span>
     </div>
 
     <main class="page-shell">
       <header class="hero">
-        <p class="eyebrow">Jordan Simonovski</p>
-        <h1>Build cool things.<br />Measure everything.</h1>
+        <div class="status-line" aria-live="polite">
+          <span class="status-dot"></span>
+          <span class="status-text">signal: healthy</span>
+        </div>
+        <p class="eyebrow">jordansimonov.ski</p>
+        <h1>Ship shit fast.<br />Don't ship <i>shit</i> fast.</h1>
         <p class="subhead">
-          O11y @ Atlassian. Dev + ops fence-sitter. Shipping side projects with
-          attitude.
+          Engineer with a love for reliability, systems, and observability.
         </p>
       </header>
+
+      <section class="metric-grid" aria-label="Live metrics">
+        <article class="metric-card">
+          <h2>Uptime</h2>
+          <p><strong id="metric-uptime" class="metric-value">99.99%</strong></p>
+          <div class="sparkline sparkline-a" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+        <article class="metric-card">
+          <h2>Spans sampled</h2>
+          <p><strong id="metric-spans" class="metric-value">4.2M</strong></p>
+          <div class="sparkline sparkline-b" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+        <article class="metric-card">
+          <h2>Pager noise</h2>
+          <p><strong id="metric-noise" class="metric-value metric-value-text">low</strong></p>
+          <div class="sparkline sparkline-c" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+      </section>
 
       <nav class="link-grid" aria-label="Primary links">
         <a
@@ -36,9 +81,9 @@
           rel="noopener noreferrer"
           aria-label="Open CV"
         >
-          <span class="link-kicker">Career</span>
-          <strong>CV</strong>
-          <span class="link-arrow">Open -></span>
+          <span class="link-kicker">Runbook</span>
+          <strong><i class="fa-solid fa-file-lines" aria-hidden="true"></i>CV</strong>
+          <span class="link-arrow">GET /cv -> 200</span>
         </a>
         <a
           class="link-card"
@@ -47,9 +92,9 @@
           rel="noopener noreferrer"
           aria-label="Open blog"
         >
-          <span class="link-kicker">Thoughts</span>
-          <strong>Blog</strong>
-          <span class="link-arrow">Read -></span>
+          <span class="link-kicker">Logs</span>
+          <strong><i class="fa-solid fa-rss" aria-hidden="true"></i>Blog</strong>
+          <span class="link-arrow">kubectl logs -f thoughts</span>
         </a>
         <a
           class="link-card"
@@ -58,9 +103,9 @@
           rel="noopener noreferrer"
           aria-label="Open GitHub profile"
         >
-          <span class="link-kicker">Code</span>
-          <strong>GitHub</strong>
-          <span class="link-arrow">Browse -></span>
+          <span class="link-kicker">Traces</span>
+          <strong><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</strong>
+          <span class="link-arrow">span explorer -></span>
         </a>
         <a
           class="link-card"
@@ -69,14 +114,25 @@
           rel="noopener noreferrer"
           aria-label="Open LinkedIn profile"
         >
-          <span class="link-kicker">Network</span>
-          <strong>LinkedIn</strong>
-          <span class="link-arrow">Connect -></span>
+          <span class="link-kicker">Service map</span>
+          <strong><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</strong>
+          <span class="link-arrow">peer graph -></span>
+        </a>
+        <a
+          class="link-card"
+          href="https://calendly.com/app/scheduling/meeting_types/user/me"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Calendly"
+        >
+          <span class="link-kicker">Alert routing</span>
+          <strong><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Calendly</strong>
+          <span class="link-arrow">book a timeslot -></span>
         </a>
       </nav>
 
       <footer class="footer-note">
-        <p>Can I shippost in my side-projects too?</p>
+        <p>Turning pager noise into useful signals.</p>
       </footer>
     </main>
 
