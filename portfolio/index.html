@@ -41,7 +41,23 @@
   <body>
     <main class="page-shell">
       <header class="hero" aria-labelledby="site-title">
-        <p class="eyebrow">jordansimonov.ski / portfolio</p>
+        <nav class="eyebrow path-breadcrumb" aria-label="Site path">
+          <a class="path-root" href="/">jordansimonov.ski</a>
+          <span class="path-sep" aria-hidden="true">/</span>
+          <details class="path-endpoint">
+            <summary class="path-endpoint__summary">
+              <span class="path-endpoint__label">portfolio</span>
+            </summary>
+            <ul class="path-endpoint__menu">
+              <li>
+                <a href="/portfolio/" aria-current="page">portfolio</a>
+              </li>
+              <!-- Add rows here when new top-level sections ship, e.g.:
+              <li><a href="/labs/">labs</a></li>
+              -->
+            </ul>
+          </details>
+        </nav>
         <h1 id="site-title">Things<br />I've shipped.</h1>
         <p class="subhead">
           A mix of side-project apps and open source tooling. Built to scratch an itch, then left running.
