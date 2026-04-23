@@ -79,6 +79,28 @@ h1 {
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
+.project-group {
+  margin-bottom: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.project-group .primary-links {
+  margin-bottom: 0;
+}
+
+.group-heading {
+  margin: 0 0 clamp(0.8rem, 1.6vw, 1.1rem);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+}
+
+.primary-links--trio > .primary-link {
+  grid-column: span 4;
+}
+
 .primary-link {
   grid-column: span 6;
   border: 1px solid var(--line);
@@ -194,6 +216,10 @@ body.is-ready .primary-link:nth-child(2) {
   animation-delay: 120ms;
 }
 
+body.is-ready .primary-link:nth-child(3) {
+  animation-delay: 160ms;
+}
+
 body.is-ready .secondary-link:nth-child(1) {
   animation-delay: 150ms;
 }
@@ -222,7 +248,8 @@ body.is-ready .secondary-link:nth-child(4) {
 }
 
 @media (max-width: 860px) {
-  .primary-link {
+  .primary-link,
+  .primary-links--trio > .primary-link {
     grid-column: span 12;
   }
 
