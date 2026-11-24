@@ -240,7 +240,7 @@ body.in-looks .rail {
   margin: 0;
   padding: clamp(2.5rem, 9vh, 6rem) clamp(1.5rem, 4vw, 4rem) 0 calc(var(--gutter) + 2.5rem);
   font: 400 clamp(1.9rem, 3.2vw, 3rem)/1.05 var(--serif);
-  font-variation-settings: "opsz" 72;
+  font-variation-settings: "opsz" 18;
   letter-spacing: -0.01em;
   text-wrap: balance;
 }
@@ -418,7 +418,7 @@ body.in-looks .rail {
   margin: 0;
   padding: 0 var(--gutter) 0 calc(var(--gutter) + 2.25rem);
   font: 400 var(--name-size) / 1.08 var(--serif);
-  font-variation-settings: "opsz" 96;
+  font-variation-settings: "opsz" 24;
   letter-spacing: -0.035em;
   white-space: nowrap;
   color: transparent;
@@ -518,7 +518,7 @@ body.in-looks .rail {
 .archive h2 {
   margin: 0 0 2.5rem;
   font: 400 clamp(2.75rem, 7vw, 6.5rem)/0.95 var(--serif);
-  font-variation-settings: "opsz" 96;
+  font-variation-settings: "opsz" 24;
   letter-spacing: -0.03em;
 }
 
@@ -526,7 +526,7 @@ body.in-looks .rail {
   margin: 0 0 3.5rem;
   max-width: 34ch;
   font: 400 clamp(1.4rem, 2.6vw, 2.4rem)/1.3 var(--serif);
-  font-variation-settings: "opsz" 48;
+  font-variation-settings: "opsz" 14;
   text-wrap: pretty;
 }
 
@@ -625,7 +625,7 @@ body.in-looks .rail {
 }
 
 .archive h2 {
-  grid-row: span 2;
+  grid-row: span 3; /* one row per archive group */
   align-self: start;
   position: sticky;
   top: calc(var(--mast) + 2rem);
@@ -662,7 +662,7 @@ body.in-looks .rail {
 
 .archive__name {
   font: 400 clamp(1.5rem, 2.2vw, 2rem)/1.1 var(--serif);
-  font-variation-settings: "opsz" 48;
+  font-variation-settings: "opsz" 14;
   transition: font-style 0ms;
 }
 
@@ -720,7 +720,7 @@ body.in-looks .rail {
   display: block;
   padding: 1.5rem 1.25rem 1.25rem;
   font: 400 clamp(3.25rem, 8.2vw, 8rem)/0.95 var(--serif);
-  font-variation-settings: "opsz" 96;
+  font-variation-settings: "opsz" 24;
   letter-spacing: -0.03em;
   text-decoration: none;
 }

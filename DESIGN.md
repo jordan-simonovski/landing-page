@@ -19,33 +19,33 @@ typography:
     fontWeight: 400
     lineHeight: 1.08
     letterSpacing: "-0.035em"
-    fontVariation: "'opsz' 96"
+    fontVariation: "'opsz' 24"
   headline:
     fontFamily: "Bodoni Moda, Didot, Bodoni 72, serif"
     fontSize: "clamp(2.75rem, 7vw, 6.5rem)"
     fontWeight: 400
     lineHeight: 0.95
     letterSpacing: "-0.03em"
-    fontVariation: "'opsz' 96"
+    fontVariation: "'opsz' 24"
   title:
     fontFamily: "Bodoni Moda, Didot, Bodoni 72, serif"
     fontSize: "clamp(1.9rem, 3.2vw, 3rem)"
     fontWeight: 400
     lineHeight: 1.05
     letterSpacing: "-0.01em"
-    fontVariation: "'opsz' 72"
+    fontVariation: "'opsz' 18"
   statement:
     fontFamily: "Bodoni Moda, Didot, Bodoni 72, serif"
     fontSize: "clamp(1.4rem, 2.6vw, 2.4rem)"
     fontWeight: 400
     lineHeight: 1.3
-    fontVariation: "'opsz' 48"
+    fontVariation: "'opsz' 14"
   item:
     fontFamily: "Bodoni Moda, Didot, Bodoni 72, serif"
     fontSize: "clamp(1.5rem, 2.2vw, 2rem)"
     fontWeight: 400
     lineHeight: 1.1
-    fontVariation: "'opsz' 48"
+    fontVariation: "'opsz' 14"
   wordmark:
     fontFamily: "Bodoni Moda, Didot, Bodoni 72, serif"
     fontSize: "1.6rem"
@@ -212,7 +212,7 @@ A warm, near-monochrome paper-and-ink palette with a single persimmon accent.
 - **Data** (`data`): uppercase mono for the edge strip (0.14em), archive destinations and plate captions (0.08em), and calendar months (0.625rem, 0.1em). The readout and rail are mono too, but not uppercase.
 
 ### Named Rules
-**The Optical Size Rule.** Bodoni Moda is always set at the optical size matching its use: 96 for display and headline, 72 for title, 48 for statement and item. Never use the low-contrast small-opsz cut at large sizes.
+**The Optical Size Rule.** Bodoni Moda is set at a deliberately low optical size so its hairlines survive at poster scale: 24 for display and headline, 18 for title, 14 for statement and item. The high-contrast 96 cut thins to near-invisible strokes on screen at these sizes; never use it.
 
 **The Italic Is The Hover Rule.** Serif links signal hover and focus by switching to italic (archive names, close links), not by underline or weight.
 
@@ -274,7 +274,7 @@ Square cells on a 3px gap, empty cells outlined in stone, levels 1 to 4 stepping
 A full-row link between stone hairlines: serif project name, soft-ink description, uppercase mono destination aligned right. Hover italicises the name and turns the destination persimmon. Grouped under small uppercase soft-ink headings.
 
 ### Cover (home)
-The home page's first viewport: the same 38/62 split as a look. The copy column holds the name a step below headline (`clamp(2.75rem, 5.2vw, 5.5rem)`, headline's opsz 96 and -0.03em tracking) with an italic soft-ink role line, then the intro, button and quiet link at its foot. The plate column is a triptych of the three looks, one linked plate each (`/portfolio/#<look>`), divided by 1px bone rules, in the project's borrowed colours, with a serif name and an ink edge strip ("Look 0n" and the project's kind; the kind hides at 1200px and below so the strips stay one line and the names level). Hover scales the plate content to 1.05, italicises the name, and turns "Look 0n" `persimmon-on-ink`. On load the plates unveil upward left to right (CSS-only, 120ms stagger), so the resting state needs no JS. Under 960px the cover stacks and the names turn up the plate spines (`writing-mode: vertical-rl`). Below the cover, an Index uses the archive row for Collection, CV, Journal and Talks.
+The home page's first viewport: the same 38/62 split as a look. The copy column holds the name a step below headline (`clamp(2.75rem, 5.2vw, 5.5rem)`, headline's opsz 24 and -0.03em tracking) with an italic soft-ink role line, then the intro, button and quiet link at its foot. The plate column is a triptych of the three looks, one linked plate each (`/portfolio/#<look>`), divided by 1px bone rules, in the project's borrowed colours, with a serif name and an ink edge strip ("Look 0n" and the project's kind; the kind hides at 1200px and below so the strips stay one line and the names level). Hover scales the plate content to 1.05, italicises the name, and turns "Look 0n" `persimmon-on-ink`. On load the plates unveil upward left to right (CSS-only, 120ms stagger), so the resting state needs no JS. Under 960px the cover stacks and the names turn up the plate spines (`writing-mode: vertical-rl`). Below the cover, an Index uses the archive row for Collection, CV, Journal and Talks.
 
 ### Close links
 Headline-scale serif links (CV, Journal, Talks) in hairline-divided cells. Hover and focus turn them italic and persimmon. Below them, small label links with offset underlines.

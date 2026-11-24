@@ -18,7 +18,7 @@
 .cover__title {
   margin: 0;
   font: 400 clamp(2.75rem, 5.2vw, 5.5rem)/0.98 var(--serif);
-  font-variation-settings: "opsz" 96;
+  font-variation-settings: "opsz" 24;
   letter-spacing: -0.03em;
 }
 
@@ -27,7 +27,7 @@
   margin-top: 0.9rem;
   font-size: clamp(1.25rem, 1.9vw, 1.75rem);
   font-style: italic;
-  font-variation-settings: "opsz" 48;
+  font-variation-settings: "opsz" 14;
   letter-spacing: 0;
   color: var(--ink-soft);
 }
@@ -103,7 +103,7 @@
   position: relative;
   padding: 0 1.25rem 1rem;
   font: 400 clamp(1.75rem, 2.9vw, 3rem)/1 var(--serif);
-  font-variation-settings: "opsz" 72;
+  font-variation-settings: "opsz" 18;
   letter-spacing: -0.02em;
 }
 
