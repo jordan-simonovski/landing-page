@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T00:00:00Z",
+  "title": "Design System: Simonovski Collection",
+  "scope": "this system governs the whole site at jordansimonov.ski: `/portfolio` (`portfolio/index.html`, `portfolio/portfolio.css`, `portfolio/portfolio.js`) and the home page (`/`, root `index.html` + `home.css`). `portfolio/portfolio.css` holds the shared tokens and components; `home.css` adds only the cover (plus `close--home`, a spacing tweak to the closing footer). The CV, journal and talks subdomains are separate sites and are not covered.",
+  "extensions": {
+    "colorMeta": {
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "#f2eee6",
+        "tonalRamp": [
+          "#2a2722",
+          "#46423a",
+          "#666056",
+          "#888174",
+          "#aaa394",
+          "#cbc4b5",
+          "#e2dccf",
+          "#f7f4ee"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#e9e4d9",
+        "tonalRamp": [
+          "#28251f",
+          "#444037",
+          "#635d52",
+          "#857e70",
+          "#a69f90",
+          "#c8c1b2",
+          "#e0dace",
+          "#f4f1ea"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#d6cfc1",
+        "tonalRamp": [
+          "#26231d",
+          "#423d34",
+          "#61594d",
+          "#827a6b",
+          "#a39a89",
+          "#c2baaa",
+          "#dcd6ca",
+          "#f2efe8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#12110f",
+        "tonalRamp": [
+          "#12110f",
+          "#2b2925",
+          "#45423c",
+          "#615d55",
+          "#7f7a71",
+          "#a09b91",
+          "#c6c2b9",
+          "#ebe8e2"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#57524a",
+        "tonalRamp": [
+          "#1c1a17",
+          "#34312c",
+          "#57524a",
+          "#6f695f",
+          "#8b857a",
+          "#aaa499",
+          "#cbc6bd",
+          "#ece9e3"
+        ]
+      },
+      "persimmon": {
+        "role": "primary",
+        "displayName": "Persimmon",
+        "canonical": "#b8431e",
+        "tonalRamp": [
+          "#3a1407",
+          "#5e210d",
+          "#842f14",
+          "#b8431e",
+          "#d4623a",
+          "#ec8a63",
+          "#f6b89e",
+          "#fce4d9"
+        ]
+      },
+      "persimmon-on-ink": {
+        "role": "primary",
+        "displayName": "Persimmon on Ink",
+        "canonical": "#ff8f63",
+        "tonalRamp": [
+          "#4a1a08",
+          "#76290f",
+          "#a63b17",
+          "#d8552a",
+          "#ff8f63",
+          "#ffac8a",
+          "#ffcab3",
+          "#ffe8de"
+        ]
+      },
+      "calendar-1": {
+        "role": "neutral",
+        "displayName": "Calendar 1",
+        "canonical": "#cfc7b6",
+        "tonalRamp": [
+          "#24211b",
+          "#403b32",
+          "#5f584b",
+          "#807768",
+          "#a19887",
+          "#c0b8a7",
+          "#d9d2c4",
+          "#f0ede6"
+        ]
+      },
+      "calendar-2": {
+        "role": "neutral",
+        "displayName": "Calendar 2",
+        "canonical": "#9a9282",
+        "tonalRamp": [
+          "#211e19",
+          "#3b3730",
+          "#575147",
+          "#766f62",
+          "#9a9282",
+          "#b7b0a2",
+          "#d3cec3",
+          "#eeebe5"
+        ]
+      },
+      "calendar-3": {
+        "role": "neutral",
+        "displayName": "Calendar 3",
+        "canonical": "#534e46",
+        "tonalRamp": [
+          "#1b1916",
+          "#33302b",
+          "#534e46",
+          "#6c665c",
+          "#89837a",
+          "#a8a39a",
+          "#c9c5bd",
+          "#ebe8e3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The look name only: one word, enormous, crossing the copy/plate boundary."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles (Activity, Archive, Index) and the closing CV / Journal / Talks links."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The collection title in the first look; second line italic soft ink."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "The activity sentence; figures italic with lining tabular numerals."
+      },
+      "item": {
+        "displayName": "Item",
+        "purpose": "Archive project names; italic on hover."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Centred SIMONOVSKI masthead mark, uppercase."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy."
+      },
+      "body-lead": {
+        "displayName": "Body lead",
+        "purpose": "Look descriptions, max 38ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Button and quiet-link labels, uppercase."
+      },
+      "label-small": {
+        "displayName": "Label small",
+        "purpose": "Nav, archive group headings, small close links, uppercase."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Mono for provenance data only: edge strip, destinations, captions, calendar."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cell-outline",
+        "value": "inset 0 0 0 1px #d6cfc1",
+        "purpose": "Hairline stroke on empty calendar cells. Not elevation."
+      },
+      {
+        "name": "today-ring",
+        "value": "0 0 0 2px #b8431e",
+        "purpose": "Marks today's calendar cell. Not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The house ease for every transition."
+      },
+      {
+        "name": "colour",
+        "value": "300ms",
+        "purpose": "Button ground and label colour changes."
+      },
+      {
+        "name": "rule",
+        "value": "400ms",
+        "purpose": "Nav underline growth, rail colour."
+      },
+      {
+        "name": "state",
+        "value": "500ms",
+        "purpose": "Rail fade and tick, edge-strip current colour."
+      },
+      {
+        "name": "cell",
+        "value": "600ms",
+        "purpose": "Calendar cell fill when data lands."
+      },
+      {
+        "name": "plate-hover",
+        "value": "900ms",
+        "purpose": "Cover plate content scale to 1.05 on hover and focus."
+      },
+      {
+        "name": "unveil",
+        "value": "1400ms",
+        "purpose": "Plate clip-path unveil upward; also the activity count-up."
+      },
+      {
+        "name": "settle",
+        "value": "1800ms",
+        "purpose": "Plate content scale 1.08 to 1 during the unveil."
+      },
+      {
+        "name": "breathe",
+        "value": "1.6s ease-in-out infinite alternate",
+        "purpose": "Calendar loading state toward paper."
+      },
+      {
+        "name": "cover-stagger",
+        "value": "120ms",
+        "purpose": "Delay between the three cover plates' CSS-only unveil, left to right."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "960px"
+      },
+      {
+        "name": "narrow",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Black rectangular primary action; persimmon on hover.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Play Obsorio</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; min-height: 3.25rem; padding: 0 1.9rem; background: var(--ink, #12110f); color: var(--bone, #f2eee6); font: 500 0.75rem/1 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: var(--accent, #b8431e); } .ds-btn:focus-visible { outline: 2px solid var(--accent, #b8431e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Link",
+      "kind": "button",
+      "refersTo": "link-quiet",
+      "description": "Underlined secondary action beside the primary button.",
+      "html": "<a class=\"ds-quiet\" href=\"#\">obsor.io</a>",
+      "css": ".ds-quiet { padding: 0.6rem 0; color: var(--ink, #12110f); font: 500 0.75rem/1 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.6em; } .ds-quiet:hover { color: var(--accent, #b8431e); } .ds-quiet:focus-visible { outline: 2px solid var(--accent, #b8431e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Hairline masthead: anchors left, wordmark centre, outbound right; underline grows on hover.",
+      "html": "<header class=\"ds-mast\"><nav class=\"ds-mast__group\"><a href=\"#\">Looks</a><a href=\"#\">Activity</a><a href=\"#\">Archive</a></nav><a class=\"ds-mast__mark\" href=\"#\">Simonovski</a><nav class=\"ds-mast__group ds-mast__group--out\"><a href=\"#\">CV</a><a href=\"#\">Journal</a><a href=\"#\">GitHub</a></nav></header>",
+      "css": ".ds-mast { height: 3.5rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 2rem; background: var(--bone, #f2eee6); color: var(--ink, #12110f); border-bottom: 1px solid var(--stone, #d6cfc1); } .ds-mast__group { display: flex; gap: 1.5rem; } .ds-mast__group--out { justify-content: flex-end; } .ds-mast__group a { position: relative; padding: 0.75rem 0; color: inherit; font: 500 0.6875rem/1 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; } .ds-mast__group a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.45rem; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-mast__group a:hover::after, .ds-mast__group a:focus-visible::after { transform: scaleX(1); } .ds-mast__mark { color: inherit; font: 500 1.6rem/1 'Bodoni Moda', Didot, serif; letter-spacing: 0.32em; margin-right: -0.32em; text-transform: uppercase; text-decoration: none; }"
+    },
+    {
+      "name": "Edge Strip",
+      "kind": "custom",
+      "refersTo": "edge-strip",
+      "description": "Provenance data along the foot of a look plate; first item lights when current.",
+      "html": "<p class=\"ds-edge is-current\"><span>Look 01</span><span>obsor.io</span><span>TypeScript</span><span>Live</span></p>",
+      "css": ".ds-edge { margin: 0; display: flex; flex-wrap: wrap; gap: 0 1.75rem; padding: 0.55rem 1.25rem; background: var(--ink, #12110f); color: var(--bone, #f2eee6); font: 400 0.6875rem/1.6 'Martian Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.14em; text-transform: uppercase; } .ds-edge span:first-child { transition: color 500ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-edge.is-current span:first-child { color: var(--accent-on-ink, #ff8f63); }"
+    },
+    {
+      "name": "Look Rail",
+      "kind": "nav",
+      "refersTo": "look-rail",
+      "description": "Fixed bone tab of look numbers; current number turns persimmon and grows a tick.",
+      "html": "<ol class=\"ds-rail\"><li class=\"is-current\">01</li><li>02</li><li>03</li></ol>",
+      "css": ".ds-rail { margin: 0; padding: 0.9rem 0.75rem 0.9rem 1rem; list-style: none; display: inline-grid; gap: 0.9rem; background: var(--bone, #f2eee6); color: var(--ink-soft, #57524a); font: 400 0.6875rem/1 'Martian Mono', ui-monospace, Menlo, monospace; } .ds-rail li { display: flex; align-items: center; gap: 0.5rem; transition: color 400ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-rail li::after { content: ''; width: 0; height: 1px; background: currentColor; transition: width 500ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-rail li.is-current { color: var(--accent, #b8431e); } .ds-rail li.is-current::after { width: 1.5rem; }"
+    },
+    {
+      "name": "Name Split",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "One look name drawn twice and clipped at the plate edge: ink over copy, plate colour over plate.",
+      "html": "<div class=\"ds-split\"><div class=\"ds-split__plate\"></div><p class=\"ds-split__name\" data-name=\"Obsorio\">Obsorio</p></div>",
+      "css": ".ds-split { position: relative; height: 12rem; background: var(--bone, #f2eee6); overflow: hidden; } .ds-split__plate { position: absolute; inset: 0 0 0 38%; background: #0b0f14; } .ds-split__name { position: absolute; left: 0; right: 0; bottom: 0.5rem; margin: 0; padding: 0 1.5rem; font: 400 8rem/1.08 'Bodoni Moda', Didot, serif; font-variation-settings: 'opsz' 96; letter-spacing: -0.035em; white-space: nowrap; color: transparent; } .ds-split__name::before, .ds-split__name::after { content: attr(data-name); position: absolute; inset: 0; padding: inherit; } .ds-split__name::before { color: var(--ink, #12110f); clip-path: inset(0 62% 0 0); } .ds-split__name::after { color: var(--bone, #f2eee6); clip-path: inset(0 0 0 38%); }"
+    },
+    {
+      "name": "Calendar Levels",
+      "kind": "custom",
+      "refersTo": "calendar-cell-1",
+      "description": "Stone-to-ink contribution levels on square cells; today ringed in persimmon.",
+      "html": "<div class=\"ds-cal\"><i></i><i data-l=\"1\"></i><i data-l=\"2\"></i><i data-l=\"3\"></i><i data-l=\"4\"></i><i data-l=\"2\" class=\"is-today\"></i></div>",
+      "css": ".ds-cal { display: grid; grid-template-columns: repeat(6, 20px); gap: 3px; } .ds-cal i { height: 20px; background: transparent; box-shadow: inset 0 0 0 1px var(--stone, #d6cfc1); transition: background-color 600ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-cal i[data-l='1'] { background: #cfc7b6; box-shadow: none; } .ds-cal i[data-l='2'] { background: #9a9282; box-shadow: none; } .ds-cal i[data-l='3'] { background: #534e46; box-shadow: none; } .ds-cal i[data-l='4'] { background: var(--ink, #12110f); box-shadow: none; } .ds-cal i.is-today { box-shadow: 0 0 0 2px var(--accent, #b8431e); }"
+    },
+    {
+      "name": "Archive Row",
+      "kind": "card",
+      "refersTo": "archive-row",
+      "description": "Full-row link between hairlines; name italicises and destination turns persimmon on hover.",
+      "html": "<a class=\"ds-row\" href=\"#\"><span class=\"ds-row__name\">Keknames</span><span class=\"ds-row__text\">A Codenames clone, but shitpostier.</span><span class=\"ds-row__where\">keknames.up.railway.app</span></a>",
+      "css": ".ds-row { display: grid; grid-template-columns: minmax(10rem, 3fr) minmax(0, 5fr) minmax(0, 2.5fr); gap: 0.25rem 2rem; align-items: baseline; padding: 1.25rem 0; border-top: 1px solid var(--stone, #d6cfc1); border-bottom: 1px solid var(--stone, #d6cfc1); color: var(--ink, #12110f); text-decoration: none; font: 400 1rem/1.6 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif; } .ds-row__name { font: 400 2rem/1.1 'Bodoni Moda', Didot, serif; font-variation-settings: 'opsz' 48; } .ds-row__text { color: var(--ink-soft, #57524a); } .ds-row__where { justify-self: end; text-align: right; font: 400 0.6875rem/1.4 'Martian Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.08em; text-transform: uppercase; } .ds-row:hover .ds-row__name, .ds-row:focus-visible .ds-row__name { font-style: italic; } .ds-row:hover .ds-row__where { color: var(--accent, #b8431e); } .ds-row:focus-visible { outline: 2px solid var(--accent, #b8431e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Cover (home)",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Home first viewport: 38/62 split, copy column beside a triptych of linked look plates with serif names and ink edge strips.",
+      "html": "<section class=\"ds-cover\"><div class=\"ds-cover__copy\"><h1 class=\"ds-cover__title\">Jordan Simonovski <span>Observability engineer</span></h1><a class=\"ds-cover__btn\" href=\"#\">See the collection</a></div><nav class=\"ds-cover__plates\"><a class=\"ds-plate\" href=\"#\" style=\"--plate:#0b0f14;--on-plate:#f2eee6\"><span class=\"ds-plate__name\">Obsorio</span><span class=\"ds-plate__edge\"><span>Look 01</span><span>Browser game</span></span></a><a class=\"ds-plate\" href=\"#\" style=\"--plate:#d62f35;--on-plate:#fffdf5\"><span class=\"ds-plate__name\">PaperWing</span><span class=\"ds-plate__edge\"><span>Look 02</span><span>Reader PWA</span></span></a><a class=\"ds-plate\" href=\"#\" style=\"--plate:#faff69;--on-plate:#12110f\"><span class=\"ds-plate__name\">Helmcov</span><span class=\"ds-plate__edge\"><span>Look 03</span><span>Go CLI</span></span></a></nav></section>",
+      "css": ".ds-cover { display: grid; grid-template-columns: minmax(0, 38fr) minmax(0, 62fr); min-height: 22rem; background: var(--bone, #f2eee6); color: var(--ink, #12110f); border-bottom: 1px solid var(--stone, #d6cfc1); } .ds-cover__copy { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding: 2.5rem 2rem; } .ds-cover__title { margin: 0; font: 400 3.25rem/0.98 'Bodoni Moda', Didot, serif; font-variation-settings: 'opsz' 96; letter-spacing: -0.03em; } .ds-cover__title span { display: block; margin-top: 0.9rem; font-size: 1.5rem; font-style: italic; font-variation-settings: 'opsz' 48; letter-spacing: 0; color: var(--ink-soft, #57524a); } .ds-cover__btn { align-self: flex-start; display: inline-flex; align-items: center; min-height: 3.25rem; padding: 0 1.9rem; background: var(--ink, #12110f); color: var(--bone, #f2eee6); font: 500 0.75rem/1 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-cover__btn:hover { background: var(--accent, #b8431e); } .ds-cover__plates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: var(--ink, #12110f); } .ds-plate { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; background: var(--plate); color: var(--on-plate); text-decoration: none; animation: ds-unveil 1400ms cubic-bezier(0.16, 1, 0.3, 1) backwards; } .ds-plate + .ds-plate { border-left: 1px solid var(--bone, #f2eee6); } .ds-plate:nth-child(2) { animation-delay: 120ms; } .ds-plate:nth-child(3) { animation-delay: 240ms; } @keyframes ds-unveil { from { clip-path: inset(100% 0 0 0); } } .ds-plate__name { padding: 0 1.25rem 1rem; font: 400 2rem/1 'Bodoni Moda', Didot, serif; font-variation-settings: 'opsz' 72; letter-spacing: -0.02em; } .ds-plate__edge { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; padding: 0.55rem 1.25rem; background: var(--ink, #12110f); color: var(--bone, #f2eee6); font: 400 0.6875rem/1.6 'Martian Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.14em; text-transform: uppercase; } .ds-plate__edge span:first-child { transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-plate:hover .ds-plate__name, .ds-plate:focus-visible .ds-plate__name { font-style: italic; } .ds-plate:hover .ds-plate__edge span:first-child, .ds-plate:focus-visible .ds-plate__edge span:first-child { color: var(--accent-on-ink, #ff8f63); } .ds-plate:focus-visible { outline: 2px solid var(--on-plate); outline-offset: -4px; } @media (prefers-reduced-motion: reduce) { .ds-plate { animation: none; } }"
+    },
+    {
+      "name": "Close Link",
+      "kind": "custom",
+      "refersTo": "close-link",
+      "description": "Headline-scale serif exit link in a hairline cell; italic persimmon on hover.",
+      "html": "<ul class=\"ds-close\"><li><a href=\"#\">CV</a></li><li><a href=\"#\">Journal</a></li></ul>",
+      "css": ".ds-close { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; border-top: 1px solid var(--ink, #12110f); } .ds-close li { flex: 1 1 12rem; border-bottom: 1px solid var(--stone, #d6cfc1); } .ds-close li + li { border-left: 1px solid var(--stone, #d6cfc1); } .ds-close a { display: block; padding: 1.5rem 1.25rem 1.25rem; color: var(--ink, #12110f); font: 400 4rem/0.95 'Bodoni Moda', Didot, serif; font-variation-settings: 'opsz' 96; letter-spacing: -0.03em; text-decoration: none; } .ds-close li:first-child a { padding-left: 0; } .ds-close a:hover, .ds-close a:focus-visible { font-style: italic; color: var(--accent, #b8431e); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Season Collection",
+    "overview": "Side projects are presented deadpan, the way a fashion house shows a season: each piece is a full-bleed \"look\" with its name set monumentally in a high-contrast didone, a plate of real project imagery running to the edge, and a strip of provenance data along its foot. The joke only works if the execution is straight, so the material is quiet and expensive: a warm bone ground, near-black ink, stone hairlines, and generous matte negative space. Imagery from the projects themselves is the only texture.\n\nDensity is low and scale contrast is extreme. Monumental serif display sits against a spare, tracked-out grotesk for labels and a mono reserved for data (edge codes, code samples, the calendar). One seasonal accent, persimmon, marks whatever is current: the look in view, the hovered link, today's calendar cell.\n\nThe page rejects the developer-portfolio default: no headline over a grid of equal project cards, and no green contribution heatmap.",
+    "keyCharacteristics": [
+      "Bone ground, ink type, stone hairline rules; flat and square throughout.",
+      "Didone display at monumental scale, grotesk labels in tracked uppercase, mono only for data.",
+      "Each look is a split section: a copy column and a full-bleed plate, with the project name spanning both.",
+      "One accent at a time, and it follows what is current.",
+      "One authored motion: plates unveil upward as each look arrives."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Persimmon appears only on what is current or hovered, never as decoration or a fill at rest. There is never a second accent on screen.",
+        "section": "colors"
+      },
+      {
+        "name": "The Borrowed Colour Rule",
+        "body": "A look's plate takes its project's own colours (Obsorio's night ground `#0b0f14`, PaperWing's red field `#d62f35`, Helmcov's highlighter `#faff69`), set per look. When a plate's own colour would clash with persimmon, the current-state marks borrow the project's colour in its place (PaperWing: rail `#c0262c`, edge strip `#ff8a8e`, name on plate `#fffdf5`); it replaces the accent, never sits beside it. These are look-local values, not system tokens.",
+        "section": "colors"
+      },
+      {
+        "name": "The Optical Size Rule",
+        "body": "Bodoni Moda is always set at the optical size matching its use: 96 for display and headline, 72 for title, 48 for statement and item. Never use the low-contrast small-opsz cut at large sizes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Italic Is The Hover Rule",
+        "body": "Serif links signal hover and focus by switching to italic (archive names, close links), not by underline or weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Is Data Rule",
+        "body": "Martian Mono only carries data: provenance codes, URLs as destinations, code samples, dates and counts. Never prose or headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Matte Rule",
+        "body": "Surfaces never lift. Separation is a 1px stone hairline or a change of ground, never a shadow, blur or gradient.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** ease every transition with `cubic-bezier(0.16, 1, 0.3, 1)`: 300ms for colour, 400 to 600ms for rules and state, 1400 to 1800ms for the plate unveil.",
+      "**Do** give every look a plate of the project's real imagery or real output, running to the edge.",
+      "**Do** set each look's name as a single word at `display` size, crossing the copy/plate boundary.",
+      "**Do** honour reduced motion: everything visible, no unveil, no count-up, transitions cut to 1ms.",
+      "**Do** keep content visible without JS: the portfolio's motion is opt-in via the `motion` class, and the cover's CSS-only unveil animates from a fully visible resting state."
+    ],
+    "donts": [
+      "**Don't** put persimmon on anything at rest, or add a second accent beside it (The One Accent Rule).",
+      "**Don't** use rounded corners, drop shadows, gradients or blur.",
+      "**Don't** set prose or headings in the mono.",
+      "**Don't** present projects as a grid of equal cards, or colour the calendar green."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "portfolio/**"
+        ],
+        "createdAt": "2026-11-24T01:03:20.112Z",
+        "reason": "Chosen world luxury-fashion-flagship specifies a bone-white ground; the user picked that card on the decision page"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "portfolio/index.html"
+        ],
+        "createdAt": "2026-11-24T01:05:49.908Z",
+        "reason": "Model judgement: archive and closing rows are hairline-ruled editorial lists (top/bottom rules, no box), text flush-left by design of the fashion-flagship world"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-24T22:51:42.984Z",
+        "reason": "Same committed bone ground as portfolio (DESIGN.md bone #f2eee6); home page extends that system"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-24T22:51:43.012Z",
+        "reason": "False positive: rendered h1 is 5.5rem and the Index h2 6.5rem against 1.125rem body (verified in screenshots); the sizes live in the linked stylesheets"
+      }
+    ]
+  }
+}

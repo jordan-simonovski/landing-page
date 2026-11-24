@@ -1,0 +1,215 @@
+/* Home page: the house's front door. Shares tokens and components with /portfolio/portfolio.css. */
+
+.cover {
+  min-height: calc(100svh - var(--mast));
+  display: grid;
+  grid-template-columns: minmax(0, 38fr) minmax(0, 62fr);
+  border-bottom: 1px solid var(--stone);
+}
+
+.cover__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: clamp(2.5rem, 9vh, 6rem) clamp(1.5rem, 4vw, 4rem) clamp(2.5rem, 8vh, 5rem) var(--gutter);
+}
+
+.cover__title {
+  margin: 0;
+  font: 400 clamp(2.75rem, 5.2vw, 5.5rem)/0.98 var(--serif);
+  font-variation-settings: "opsz" 96;
+  letter-spacing: -0.03em;
+}
+
+.cover__title span {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: clamp(1.25rem, 1.9vw, 1.75rem);
+  font-style: italic;
+  font-variation-settings: "opsz" 48;
+  letter-spacing: 0;
+  color: var(--ink-soft);
+}
+
+.cover__foot {
+  display: grid;
+  gap: 1.75rem;
+}
+
+/* The collection in miniature: three plates, each a door into its look. */
+.cover__plates {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: var(--ink);
+}
+
+.plate {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--on-plate);
+  text-decoration: none;
+  background: var(--plate);
+}
+
+.plate + .plate {
+  border-left: 1px solid var(--bone);
+}
+
+.plate--obsorio { --plate: #0b0f14; --on-plate: var(--bone); }
+.plate--paperwing { --plate: #d62f35; --on-plate: #fffdf5; }
+.plate--helmcov { --plate: #faff69; --on-plate: var(--ink); }
+
+.plate img,
+.plate__hit {
+  transition: scale 900ms var(--ease-out);
+}
+
+.plate img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pip cropped by the top edge, as on its look */
+.plate--paperwing img {
+  inset: -8% auto auto 50%;
+  width: 150%;
+  height: auto;
+  max-width: none;
+  aspect-ratio: 1;
+  translate: -50% 0;
+}
+
+.plate__hit {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  translate: -50% 0;
+  padding: 0.05em 0.25em;
+  background: var(--ink);
+  color: #faff69;
+  font: 400 clamp(1.25rem, 2.4vw, 2.75rem)/1 var(--mono);
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.plate__name {
+  position: relative;
+  padding: 0 1.25rem 1rem;
+  font: 400 clamp(1.75rem, 2.9vw, 3rem)/1 var(--serif);
+  font-variation-settings: "opsz" 72;
+  letter-spacing: -0.02em;
+}
+
+.plate__edge {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--ink);
+  color: var(--bone);
+  font: 400 0.6875rem/1.6 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.plate__edge span:first-child {
+  transition: color 300ms var(--ease-out);
+}
+
+.plate:hover img,
+.plate:focus-visible img,
+.plate:hover .plate__hit,
+.plate:focus-visible .plate__hit {
+  scale: 1.05;
+}
+
+.plate:hover .plate__name,
+.plate:focus-visible .plate__name {
+  font-style: italic;
+}
+
+.plate:hover .plate__edge span:first-child,
+.plate:focus-visible .plate__edge span:first-child {
+  color: var(--accent-on-ink);
+}
+
+.plate:focus-visible {
+  outline-offset: -4px;
+  outline-color: var(--on-plate);
+}
+
+/* The one authored moment: the plates unveil upward, left to right, as the page opens.
+   The resting state is fully visible, so no-JS and reduced motion lose nothing. */
+@keyframes unveil {
+  from { clip-path: inset(100% 0 0 0); }
+}
+
+.plate {
+  animation: unveil 1400ms var(--ease-out) backwards;
+}
+
+.plate--paperwing { animation-delay: 120ms; }
+.plate--helmcov { animation-delay: 240ms; }
+
+.close--home {
+  padding-top: 2.5rem;
+}
+
+.close--home .close__small {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 960px) {
+  .cover {
+    min-height: 0;
+    grid-template-columns: 100%;
+  }
+
+  .cover__copy {
+    padding: 2.5rem var(--gutter) 3rem;
+  }
+
+  .cover__plates {
+    height: min(70svh, 34rem);
+  }
+
+  /* too narrow for horizontal names: set them up the spine, like a book on a shelf */
+  .plate__name {
+    position: absolute;
+    left: 0.4rem;
+    bottom: 3.25rem;
+    padding: 0;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .plate__kind {
+    display: none;
+  }
+
+  .plate__edge {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .plate__hit {
+    top: 30%;
+    font-size: min(1.75rem, 4.6vw);
+  }
+}
+
+/* keep all three strips one line tall so the names stay level */
+@media (max-width: 1200px) {
+  .plate__kind {
+    display: none;
+  }
+}

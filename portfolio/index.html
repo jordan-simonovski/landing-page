@@ -5,216 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jordan Simonovski - portfolio of shipped apps and open source projects."
+      content="Jordan Simonovski - things I've shipped: Obsorio, PaperWing, Helmcov and more, plus a year of open source activity."
     />
-    <meta name="theme-color" content="#7d5ba6" />
+    <meta name="theme-color" content="#f2eee6" />
     <link rel="canonical" href="https://jordansimonov.ski/portfolio/" />
     <link rel="icon" type="image/svg+xml" href="../js-favicon.svg" />
-    <meta property="og:title" content="Jordan Simonovski - Portfolio" />
+    <meta property="og:title" content="Jordan Simonovski - Things I've shipped" />
     <meta
       property="og:description"
-      content="Jordan Simonovski - portfolio of shipped apps and open source projects."
+      content="Things I've shipped: Obsorio, PaperWing, Helmcov and more, plus a year of open source activity."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jordansimonov.ski/portfolio/" />
-    <meta property="og:image" content="https://jordansimonov.ski/js-favicon.svg" />
-    <meta property="og:image:width" content="64" />
-    <meta property="og:image:height" content="64" />
-    <meta property="og:image:alt" content="Jordan Simonovski profile image" />
+    <meta property="og:image" content="https://jordansimonov.ski/portfolio/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Things I've shipped: Obsorio set in a huge serif over its pixel-art factory floor." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jordan Simonovski - Portfolio" />
-    <meta
-      name="twitter:description"
-      content="Jordan Simonovski - portfolio of shipped apps and open source projects."
-    />
-    <meta name="twitter:image" content="https://jordansimonov.ski/js-favicon.svg" />
-    <title>Portfolio - Jordan Simonovski</title>
+    <meta name="twitter:title" content="Jordan Simonovski - Things I've shipped" />
+    <meta name="twitter:image" content="https://jordansimonov.ski/portfolio/og.png" />
+    <title>Things I've shipped - Jordan Simonovski</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Hanken+Grotesk:wght@400;500&family=Martian+Mono:wdth,wght@87.5,400&display=swap"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preload" as="image" href="./looks/obsorio-floor.webp" />
+    <link rel="stylesheet" href="./portfolio.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="hero" aria-labelledby="site-title">
-        <nav class="eyebrow path-breadcrumb" aria-label="Site path">
-          <a class="path-root" href="/">jordansimonov.ski</a>
-          <span class="path-sep" aria-hidden="true">/</span>
-          <details class="path-endpoint">
-            <summary class="path-endpoint__summary">
-              <span class="path-endpoint__label">portfolio</span>
-            </summary>
-            <ul class="path-endpoint__menu">
-              <li>
-                <a href="/portfolio/" aria-current="page">portfolio</a>
-              </li>
-              <!-- Add rows here when new top-level sections ship, e.g.:
-              <li><a href="/labs/">labs</a></li>
-              -->
-            </ul>
-          </details>
-        </nav>
-        <h1 id="site-title">Things<br />I've shipped.</h1>
-        <p class="subhead">
-          A mix of side-project apps and open source tooling. Built to scratch an itch, then left running.
-        </p>
-        <p class="proof-line">Apps in the wild. Tools on GitHub. All real.</p>
-      </header>
+    <a class="skip" href="#looks">Skip to the looks</a>
 
-      <section class="project-group" aria-labelledby="apps-heading">
-        <h2 class="group-heading" id="apps-heading">Apps</h2>
-        <div class="primary-links">
-          <a
-            class="primary-link"
-            href="https://plugorpump.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Plug or Pump"
-          >
-            <span class="link-kicker">App</span>
-            <h2><i class="fa-solid fa-charging-station" aria-hidden="true"></i> Plug or Pump</h2>
-            <p>Free tool to compare EVs to ICE dollar-for-dollar. Tackles common misconceptions and misinformation.</p>
-            <span class="link-arrow">plugorpump.app -></span>
-          </a>
-          <a
-            class="primary-link"
-            href="https://www.rays2roi.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Rays2ROI"
-          >
-            <span class="link-kicker">App</span>
-            <h2><i class="fa-solid fa-solar-panel" aria-hidden="true"></i> Rays2ROI</h2>
-            <p>Calculate time to ROI for your solar investment.</p>
-            <span class="link-arrow">rays2roi.com -></span>
-          </a>
-          <a
-            class="primary-link"
-            href="https://keknames.up.railway.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Keknames"
-          >
-            <span class="link-kicker">App</span>
-            <h2><i class="fa-solid fa-dice" aria-hidden="true"></i> Keknames</h2>
-            <p>A Codenames clone, but shitpostier.</p>
-            <span class="link-arrow">keknames.up.railway.app -></span>
-          </a>
-          <a
-            class="primary-link"
-            href="https://gaggimate-wrapped.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Gaggimate Wrapped"
-          >
-            <span class="link-kicker">App</span>
-            <h2><i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Gaggimate Wrapped</h2>
-            <p>Spotify Wrapped, but for shot extractions on a Gaggia with the Gaggimate mod.</p>
-            <span class="link-arrow">gaggimate-wrapped.vercel.app -></span>
-          </a>
-        </div>
-      </section>
-
-      <section class="project-group" aria-labelledby="oss-heading">
-        <h2 class="group-heading" id="oss-heading">Open Source</h2>
-        <div class="primary-links">
-          <a
-            class="primary-link"
-            href="https://github.com/jordan-simonovski/helmcov"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Helmcov on GitHub"
-          >
-            <span class="link-kicker">OSS</span>
-            <h2><i class="fa-brands fa-github" aria-hidden="true"></i> Helmcov</h2>
-            <p>Dynamic coverage checking for Helm charts.</p>
-            <span class="link-arrow">View on GitHub -></span>
-          </a>
-          <a
-            class="primary-link"
-            href="https://github.com/jordan-simonovski/plusplus"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Plusplus on GitHub"
-          >
-            <span class="link-kicker">OSS</span>
-            <h2><i class="fa-brands fa-github" aria-hidden="true"></i> Plusplus</h2>
-            <p>A Slack karma system.</p>
-            <span class="link-arrow">View on GitHub -></span>
-          </a>
-          <a
-            class="primary-link"
-            href="https://github.com/jordan-simonovski/helmver"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Helmver on GitHub"
-          >
-            <span class="link-kicker">OSS</span>
-            <h2><i class="fa-brands fa-github" aria-hidden="true"></i> Helmver</h2>
-            <p>Semantic versioning for Helm charts.</p>
-            <span class="link-arrow">View on GitHub -></span>
-          </a>
-          <a
-            class="primary-link"
-            href="https://github.com/jordan-simonovski/heatmap-panel"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Heatmap Panel on GitHub"
-          >
-            <span class="link-kicker">OSS</span>
-            <h2><i class="fa-brands fa-github" aria-hidden="true"></i> Heatmap Panel</h2>
-            <p>Grafana panel plugins and a Scenes app to visualise observability data from ClickHouse.</p>
-            <span class="link-arrow">View on GitHub -></span>
-          </a>
-        </div>
-      </section>
-
-      <nav class="secondary-links" aria-label="Other destinations">
-        <a
-          class="secondary-link"
-          href="/"
-          aria-label="Back to home"
-        >
-          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Home
-        </a>
-        <a
-          class="secondary-link"
-          href="https://github.com/jordan-simonovski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open GitHub profile"
-        >
-          <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-        </a>
-        <a
-          class="secondary-link"
-          href="https://blog.jordansimonov.ski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open blog"
-        >
-          <i class="fa-solid fa-rss" aria-hidden="true"></i> Blog
-        </a>
-        <a
-          class="secondary-link"
-          href="https://cv.jordansimonov.ski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open CV"
-        >
-          <i class="fa-solid fa-file-lines" aria-hidden="true"></i> CV
-        </a>
+    <header class="mast">
+      <nav class="mast__group mast__group--sections" aria-label="Sections">
+        <a href="#looks">Looks</a>
+        <a href="#activity">Activity</a>
+        <a href="#archive">Archive</a>
       </nav>
+      <a class="mast__mark" href="/" aria-label="Simonovski, back to home">Simonovski</a>
+      <nav class="mast__group mast__group--out" aria-label="Elsewhere">
+        <a href="https://cv.jordansimonov.ski" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="https://blog.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Journal</a>
+        <a href="https://talks.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Talks</a>
+        <a href="https://github.com/jordan-simonovski" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </header>
 
-      <footer class="footer-note">
-        <p>Built because the internet should have more useful things in it.</p>
-      </footer>
+    <ol class="rail" aria-hidden="true">
+      <li data-look="obsorio">01</li>
+      <li data-look="paperwing">02</li>
+      <li data-look="helmcov">03</li>
+    </ol>
+
+    <main id="looks">
+      <section class="look look--obsorio" id="obsorio" aria-labelledby="obsorio-name">
+        <h1 class="collection">Things I've shipped <span>Collection 2026</span></h1>
+        <div class="look__copy">
+          <p class="look__text">
+            A factory game about observability. Carry logs, metrics and traces into storage while the company
+            grows until it breaks.
+          </p>
+          <p class="look__note">Plays in the browser. Hold a phone sideways.</p>
+          <div class="look__actions">
+            <a class="btn" href="https://obsor.io" target="_blank" rel="noopener noreferrer">Play Obsorio</a>
+            <a class="quiet" href="https://obsor.io" target="_blank" rel="noopener noreferrer">obsor.io</a>
+          </div>
+        </div>
+        <figure class="look__plate">
+          <img
+            src="./looks/obsorio-floor.webp"
+            width="1060"
+            height="2000"
+            alt="Obsorio's pixel-art factory floor: server racks and services joined by teal and magenta conveyor belts carrying telemetry."
+          />
+        </figure>
+        <h2 class="look__name" id="obsorio-name" data-name="Obsorio">Obsorio</h2>
+        <p class="look__edge"><span>Look 01</span><span>obsor.io</span><span>TypeScript</span><span>Browser game</span><span>Live</span></p>
+      </section>
+
+      <section class="look look--paperwing look--flip" id="paperwing" aria-labelledby="paperwing-name">
+        <div class="look__copy">
+          <p class="look__text">
+            A reader for the open web, organised by topic rather than by source. Hacker News, Lobsters, Bluesky,
+            Lemmy, Mastodon and publishers' feeds in one place. No accounts, no tracking, works offline.
+          </p>
+          <div class="look__actions">
+            <a class="btn" href="https://paperwing.io" target="_blank" rel="noopener noreferrer">Read PaperWing</a>
+            <a class="quiet" href="https://github.com/paperwingio/paperwing" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
+        <figure class="look__plate">
+          <img src="./looks/pip.svg" width="640" height="640" alt="Pip, PaperWing's paper owl mascot, reading an open book." />
+        </figure>
+        <h2 class="look__name" id="paperwing-name" data-name="PaperWing">PaperWing</h2>
+        <p class="look__edge"><span>Look 02</span><span>paperwing.io</span><span>TypeScript PWA</span><span>Apache-2.0</span><span>Live</span></p>
+      </section>
+
+      <section class="look look--helmcov" id="helmcov" aria-labelledby="helmcov-name">
+        <div class="look__copy">
+          <p class="look__text">
+            Line and branch coverage for Helm chart templates, measured from your helm-unittest suites. It finds
+            the conditionals and loops your tests never reach. Started here; now maintained in the ClickHouse org.
+          </p>
+          <div class="look__actions">
+            <a class="btn" href="https://github.com/ClickHouse/helmcov" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </div>
+        </div>
+        <figure class="look__plate look__plate--type">
+          <pre class="cmd"><span class="dim">$</span> helmcov --chart charts/my-app --verbose</pre>
+          <p class="hit">
+            <span class="hit__where">templates/service.yaml:12</span>
+            <span class="hit__src">{{- if .Values.tls }}</span>
+            <b class="hit__branch">(if:true)</b>
+          </p>
+          <figcaption>Example from the README: a branch your tests never reach</figcaption>
+        </figure>
+        <h2 class="look__name" id="helmcov-name" data-name="Helmcov">Helmcov</h2>
+        <p class="look__edge"><span>Look 03</span><span>github.com/ClickHouse/helmcov</span><span>Go</span><span>Now in the ClickHouse org</span></p>
+      </section>
     </main>
 
-    <script src="../script.js"></script>
+    <section class="activity" id="activity" aria-labelledby="activity-title" data-state="loading">
+      <h2 id="activity-title">The season in commits</h2>
+      <p class="activity__line" aria-live="polite">
+        <span class="n" data-key="total">…</span> contributions on GitHub in the last year, across
+        <span class="n" data-key="activeDays">…</span> days. Longest run:
+        <span class="n" data-key="longest">…</span> days straight. Current run:
+        <span class="n" data-key="current">…</span>.
+      </p>
+      <p class="activity__error">
+        GitHub's activity feed didn't answer just now.
+        <a href="https://github.com/jordan-simonovski" target="_blank" rel="noopener noreferrer">See it on GitHub instead</a>.
+      </p>
+      <div class="calendar">
+        <div class="calendar__scroll">
+          <div class="calendar__months" aria-hidden="true"></div>
+          <div class="calendar__grid" role="img" aria-label="Daily GitHub contributions for the last year"></div>
+        </div>
+        <p class="calendar__readout" aria-hidden="true">Hover or tap a day</p>
+      </div>
+    </section>
+
+    <section class="archive" id="archive" aria-labelledby="archive-title">
+      <h2 id="archive-title">Archive</h2>
+      <div class="archive__group">
+        <h3>Apps</h3>
+        <ul>
+          <li><a href="https://plugorpump.app/" target="_blank" rel="noopener noreferrer"><span class="archive__name">Plug or Pump</span><span class="archive__text">Compare EVs to ICE dollar for dollar, and take on the common myths.</span><span class="archive__where">plugorpump.app</span></a></li>
+          <li><a href="https://www.rays2roi.com/" target="_blank" rel="noopener noreferrer"><span class="archive__name">Rays2ROI</span><span class="archive__text">How long until your solar panels pay for themselves.</span><span class="archive__where">rays2roi.com</span></a></li>
+          <li><a href="https://keknames.up.railway.app/" target="_blank" rel="noopener noreferrer"><span class="archive__name">Keknames</span><span class="archive__text">A Codenames clone, but shitpostier.</span><span class="archive__where">keknames.up.railway.app</span></a></li>
+          <li><a href="https://gaggimate-wrapped.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="archive__name">Gaggimate Wrapped</span><span class="archive__text">Spotify Wrapped, but for shots pulled on a Gaggia with the Gaggimate mod.</span><span class="archive__where">gaggimate-wrapped.vercel.app</span></a></li>
+        </ul>
+      </div>
+      <div class="archive__group">
+        <h3>Open source</h3>
+        <ul>
+          <li><a href="https://github.com/jordan-simonovski/helmver" target="_blank" rel="noopener noreferrer"><span class="archive__name">Helmver</span><span class="archive__text">Semantic versioning and changelogs for Helm charts.</span><span class="archive__where">GitHub</span></a></li>
+          <li><a href="https://github.com/jordan-simonovski/event-deltas" target="_blank" rel="noopener noreferrer"><span class="archive__name">Heatmap Panel</span><span class="archive__text">Grafana panels and a Scenes app for observability data in ClickHouse.</span><span class="archive__where">GitHub</span></a></li>
+          <li><a href="https://github.com/jordan-simonovski/plusplus" target="_blank" rel="noopener noreferrer"><span class="archive__name">Plusplus</span><span class="archive__text">A Slack karma system.</span><span class="archive__where">GitHub</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="close" aria-labelledby="close-title">
+      <h2 id="close-title" class="visually-hidden">Elsewhere</h2>
+      <ul class="close__big">
+        <li><a href="https://cv.jordansimonov.ski" target="_blank" rel="noopener noreferrer">CV</a></li>
+        <li><a href="https://blog.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Journal</a></li>
+        <li><a href="https://talks.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Talks</a></li>
+      </ul>
+      <ul class="close__small">
+        <li><a href="/">Home</a></li>
+        <li><a href="https://github.com/jordan-simonovski" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://bsky.app/profile/jordansimonov.ski" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+        <li><a href="https://www.linkedin.com/in/jsimonovski/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+      <p class="close__note">Built because the internet should have more useful things in it.</p>
+    </footer>
+
+    <script src="./portfolio.js" defer></script>
   </body>
 </html>

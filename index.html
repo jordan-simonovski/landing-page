@@ -5,139 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jordan Simonovski - observability engineer building reliable systems and practical tooling."
+      content="Jordan Simonovski - observability engineer building systems that hold up in production and writing about the work."
     />
-    <meta name="theme-color" content="#7d5ba6" />
+    <meta name="theme-color" content="#f2eee6" />
     <link rel="canonical" href="https://jordansimonov.ski/" />
-    <link rel="icon" type="image/svg+xml" href="./js-favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/js-favicon.svg" />
     <meta property="og:title" content="Jordan Simonovski" />
     <meta
       property="og:description"
-      content="Jordan Simonovski - observability engineer building reliable systems and practical tooling."
+      content="Observability engineer building systems that hold up in production and writing about the work."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jordansimonov.ski/" />
-    <meta property="og:image" content="https://jordansimonov.ski/js-favicon.svg" />
-    <meta property="og:image:width" content="64" />
-    <meta property="og:image:height" content="64" />
-    <meta property="og:image:alt" content="Jordan Simonovski profile image" />
+    <meta property="og:image" content="https://jordansimonov.ski/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Jordan Simonovski in a large serif beside three plates: Obsorio, PaperWing and Helmcov." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Jordan Simonovski" />
-    <meta
-      name="twitter:description"
-      content="Jordan Simonovski - observability engineer building reliable systems and practical tooling."
-    />
-    <meta name="twitter:image" content="https://jordansimonov.ski/js-favicon.svg" />
+    <meta name="twitter:image" content="https://jordansimonov.ski/og.png" />
     <title>Jordan Simonovski</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Hanken+Grotesk:wght@400;500&family=Martian+Mono:wdth,wght@87.5,400&display=swap"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preload" as="image" href="/portfolio/looks/obsorio-floor.webp" />
+    <link rel="stylesheet" href="/portfolio/portfolio.css" />
+    <link rel="stylesheet" href="/home.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="hero" aria-labelledby="site-title">
-        <p class="eyebrow">jordansimonov.ski</p>
-        <h1 id="site-title">Ship fast.<br />Stay reliable.</h1>
-        <p class="subhead">
-          Observability engineer building systems that hold up in production and writing about the work.
-        </p>
-        <p class="proof-line">Reliable systems. Practical writing. Clear execution.</p>
-      </header>
+    <a class="skip" href="#cover">Skip to content</a>
 
-      <section class="primary-links primary-links--trio" aria-label="Primary destinations">
-        <a
-          class="primary-link"
-          href="https://cv.jordansimonov.ski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open CV"
-        >
-          <span class="link-kicker">Primary</span>
-          <h2><i class="fa-solid fa-file-lines" aria-hidden="true"></i> CV</h2>
-          <p>Experience, delivery history, and what I can build with your team.</p>
-          <span class="link-arrow">Open CV -></span>
-        </a>
-        <a
-          class="primary-link"
-          href="https://blog.jordansimonov.ski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open blog"
-        >
-          <span class="link-kicker">Primary</span>
-          <h2><i class="fa-solid fa-rss" aria-hidden="true"></i> Blog</h2>
-          <p>Field notes on observability, reliability, and shipping useful tools.</p>
-          <span class="link-arrow">Read posts -></span>
-        </a>
-        <a
-          class="primary-link"
-          href="/portfolio/"
-          aria-label="Open portfolio"
-        >
-          <span class="link-kicker">Primary</span>
-          <h2><i class="fa-solid fa-cubes" aria-hidden="true"></i> Portfolio</h2>
-          <p>Apps in the wild and open source tooling I've shipped.</p>
-          <span class="link-arrow">See projects -></span>
-        </a>
+    <header class="mast">
+      <nav class="mast__group mast__group--sections" aria-label="Sections">
+        <a href="/portfolio/">Collection</a>
+        <a href="#index">Index</a>
+      </nav>
+      <a class="mast__mark" href="/" aria-current="page">Simonovski</a>
+      <nav class="mast__group mast__group--out" aria-label="Elsewhere">
+        <a href="https://cv.jordansimonov.ski" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="https://blog.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Journal</a>
+        <a href="https://talks.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Talks</a>
+        <a href="https://github.com/jordan-simonovski" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cover" id="cover" aria-labelledby="cover-title">
+        <div class="cover__copy">
+          <h1 class="cover__title" id="cover-title">Jordan Simonovski <span>Observability engineer</span></h1>
+          <div class="cover__foot">
+            <p class="look__text">
+              Building systems that hold up in production and writing about the work. Off the clock, building
+              things about the same problems, for fun.
+            </p>
+            <div class="look__actions">
+              <a class="btn" href="/portfolio/">See the collection</a>
+              <a class="quiet" href="https://blog.jordansimonov.ski" target="_blank" rel="noopener noreferrer">Read the journal</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="cover__plates" aria-label="Collection 2026">
+          <a class="plate plate--obsorio" href="/portfolio/#obsorio">
+            <img src="/portfolio/looks/obsorio-floor.webp" width="1060" height="2000" alt="" />
+            <span class="plate__name">Obsorio</span>
+            <span class="plate__edge"><span>Look 01</span><span class="plate__kind">Browser game</span></span>
+          </a>
+          <a class="plate plate--paperwing" href="/portfolio/#paperwing">
+            <img src="/portfolio/looks/pip.svg" width="640" height="640" alt="" />
+            <span class="plate__name">PaperWing</span>
+            <span class="plate__edge"><span>Look 02</span><span class="plate__kind">Reader PWA</span></span>
+          </a>
+          <a class="plate plate--helmcov" href="/portfolio/#helmcov">
+            <span class="plate__hit" aria-hidden="true">(if:true)</span>
+            <span class="plate__name">Helmcov</span>
+            <span class="plate__edge"><span>Look 03</span><span class="plate__kind">Go CLI</span></span>
+          </a>
+        </nav>
       </section>
 
-      <nav class="secondary-links" aria-label="Other destinations">
-        <a
-          class="secondary-link"
-          href="https://github.com/jordan-simonovski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open GitHub profile"
-        >
-          <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-        </a>
-        <a
-          class="secondary-link"
-          href="https://www.linkedin.com/in/jsimonovski/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open LinkedIn profile"
-        >
-          <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
-        </a>
-        <a
-          class="secondary-link"
-          href="https://bsky.app/profile/jordansimonov.ski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open Bluesky profile"
-        >
-          <i class="fa-brands fa-bluesky" aria-hidden="true"></i> Bluesky
-        </a>
-        <a
-          class="secondary-link"
-          href="https://talks.jordansimonov.ski"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open talks"
-        >
-          <i class="fa-solid fa-microphone" aria-hidden="true"></i> Talks
-        </a>
-        <a
-          class="secondary-link"
-          href="https://calendly.com/app/scheduling/meeting_types/user/me"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open Calendly"
-        >
-          <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Calendly
-        </a>
-      </nav>
-
-      <footer class="footer-note">
-        <p>Turning pager noise into useful signals.</p>
-      </footer>
+      <section class="archive" id="index" aria-labelledby="index-title">
+        <h2 id="index-title">Index</h2>
+        <div class="archive__group">
+          <ul>
+            <li><a href="/portfolio/"><span class="archive__name">Collection</span><span class="archive__text">Apps in the wild and open source tooling I've shipped, plus a year of commits.</span><span class="archive__where">/portfolio</span></a></li>
+            <li><a href="https://cv.jordansimonov.ski" target="_blank" rel="noopener noreferrer"><span class="archive__name">CV</span><span class="archive__text">Experience, delivery history, and what I can build with your team.</span><span class="archive__where">cv.jordansimonov.ski</span></a></li>
+            <li><a href="https://blog.jordansimonov.ski" target="_blank" rel="noopener noreferrer"><span class="archive__name">Journal</span><span class="archive__text">Field notes on observability, reliability, and shipping useful tools.</span><span class="archive__where">blog.jordansimonov.ski</span></a></li>
+            <li><a href="https://talks.jordansimonov.ski" target="_blank" rel="noopener noreferrer"><span class="archive__name">Talks</span><span class="archive__text">Slides from talks I've given.</span><span class="archive__where">talks.jordansimonov.ski</span></a></li>
+          </ul>
+        </div>
+      </section>
     </main>
+
+    <footer class="close close--home">
+      <ul class="close__small">
+        <li><a href="https://github.com/jordan-simonovski" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://bsky.app/profile/jordansimonov.ski" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+        <li><a href="https://www.linkedin.com/in/jsimonovski/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://calendly.com/jordan-simonovski/30min" target="_blank" rel="noopener noreferrer">Book a call</a></li>
+      </ul>
+      <p class="close__note">Turning pager noise into useful signals.</p>
+    </footer>
 
     <script>
       window.va =
@@ -147,6 +118,5 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="./script.js"></script>
   </body>
 </html>
